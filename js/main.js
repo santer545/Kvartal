@@ -44,7 +44,6 @@ function initialSlider() {
     });
 
     $('.js-plan-prev').on("click", function() {
-        $('.plan-pagination li.active').prev().addClass('active');
         $('.plan-pagination li').removeClass('active');
         $('[data-id="' + swiperPlan.realIndex + '"]').addClass('active');
     });
