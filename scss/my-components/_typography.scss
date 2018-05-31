@@ -27,6 +27,10 @@
     color: #202020;
     margin-bottom: 20px;
 
+    @media screen and (max-width: 991px) {
+        font-size: 2rem;    
+    }
+
     &__inline {
         display: inline-block;  
         vertical-align: middle; 

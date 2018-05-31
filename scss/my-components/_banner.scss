@@ -5,9 +5,19 @@
         min-height: 940px;
         height: 940px;
 
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             height: 825px;
             min-height: 825px;
+        }
+
+        @media screen and (max-width: 991px) {
+            height: 720px;
+            min-height: 720px;
+        }
+
+        @media screen and (max-width: 850px) {
+            height: 650px;
+            min-height: 650px;
         }
 
         &:before {
@@ -32,26 +42,26 @@
         }
     }
     &-social {
-    	position: absolute;
-    	list-style-type: none;
-    	padding: 0;
-    	margin: 0;
-    	position: absolute;
-    	bottom: -15px;	
-    	left: 15px;
-    	z-index: 2;	
-    	li {
-    		display: block;
-    		&:not(:last-child) {
-    			margin-bottom: 25px;
-    		}
+        position: absolute;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: -15px;
+        left: 15px;
+        z-index: 2;
+        li {
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
 
-    		a {
-    			display: block;
+            a {
+                display: block;
                 width: 42px;
                 height: 42px;
-    		}
-    	}
+            }
+        }
     }
     &-right {
         position: absolute;
@@ -61,12 +71,12 @@
         z-index: 3;
         color: #fff;
 
-        @media screen and (max-width: 1919px){
+        @media screen and (max-width: 1919px) {
             right: 4%;
             width: 70%;
         }
 
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             width: 75%;
         }
     }
@@ -76,10 +86,15 @@
         font-size: 4.375rem;
         line-height: 1.1;
         font-weight: bold;
-        text-transform: uppercase;	
+        text-transform: uppercase;
 
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             font-size: 3rem;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
     }
 
@@ -90,11 +105,11 @@
         font-size: 1.25rem;
         width: 50%;
 
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             width: 70%;
         }
 
-        @media screen and (max-width: 1199px){
+        @media screen and (max-width: 1199px) {
             width: 100%;
         }
 
@@ -129,24 +144,28 @@
         margin-bottom: 20px;
         width: 30%;
 
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             width: 75%;
             margin-top: 40px;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin-top: 20px;
         }
     }
 
     &-copyright {
-    	top: -60px;	
-    	width: 26%;	
-    	position: absolute;	
-    	left: 15px;	
-    	padding-right: 100px;	
-    	font-family: 'Century Gothic';
-    	font-size: 0.78rem;	
-    	z-index: 2;	
-    	color: #c7c7c7;
+        top: -60px;
+        width: 26%;
+        position: absolute;
+        left: 15px;
+        padding-right: 100px;
+        font-family: 'Century Gothic';
+        font-size: 0.78rem;
+        z-index: 2;
+        color: #c7c7c7;
 
-        @media screen and (max-width: 1199px){
+        @media screen and (max-width: 1199px) {
             top: -100px;
         }
     }
@@ -159,7 +178,7 @@
     font-size: 1.5625rem;
     font-weight: bold;
     color: $primary-color;
-    
+
     sup {
         top: -4px;
         font-size: 1.25rem;
@@ -182,7 +201,9 @@
         color: #202020;
         height: auto;
         font-size: 0.78rem;
-        width: 25% !important;
+        @media screen and (min-width: 992px) {
+            width: 25% !important;
+        }
     }
 
     .swiper-button-next,
@@ -193,12 +214,16 @@
         background: url('../images/css_sprites.png') -88px -133px;
         right: -60px;
 
-        @media screen and (max-width: 1919px){
+        @media screen and (max-width: 1919px) {
             right: -45px;
         }
 
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             right: -35px;
+        }
+
+        @media screen and (max-width: 991px) {
+            right: -27px;
         }
         &:focus {
             outline: none;
@@ -213,11 +238,15 @@
         background: url('../images/css_sprites.png') -49px -133px;
         left: -60px;
 
-        @media screen and (max-width: 1919px){
+        @media screen and (max-width: 1919px) {
             left: -45px;
         }
-        @media screen and (max-width: 1439px){
+        @media screen and (max-width: 1439px) {
             left: -35px;
+        }
+
+        @media screen and (max-width: 991px) {
+            left: -27px;
         }
         &:focus {
             outline: none;

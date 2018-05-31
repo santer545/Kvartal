@@ -153,6 +153,11 @@
     		border: 3px solid #c4c4c4;
     		cursor: pointer;
 
+            @media screen and (max-width: 991px){
+                width: 70px;
+                height: 70px;
+            }
+
     		&:not(:last-child) {
 
     		}
@@ -167,6 +172,11 @@
 				transform: translate(-50%, -50%);
 				border: 1px solid #c4c4c4;
 				z-index: 1;
+
+                @media screen and (max-width: 991px){
+                    width: 50px;
+                    height: 50px;
+                }
     		}
 
     		span {
@@ -181,6 +191,10 @@
     			background-color: #fff;
     			padding: 10px;
     			z-index: 2;
+
+                @media screen and (max-width: 991px){
+                    font-size: 1.8rem;
+                }
     		}
 
     		sup {

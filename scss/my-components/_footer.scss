@@ -31,6 +31,10 @@
 
     &-form {
         flex: 0 0 343px;
+
+        @media screen and (max-width: 991px) {
+            flex: 0 0 270px;
+        }
     }
 
     &-contacts {
@@ -89,6 +93,9 @@
             }
             &:not(:last-child) {
                 margin-right: 40px;
+                @media screen and (max-width: 991px) {
+                    margin-right: 10px; 
+                }
             }
         }
     }
