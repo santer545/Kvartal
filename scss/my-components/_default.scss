@@ -1,0 +1,112 @@
+html {
+    font-size: 16px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    font: normal 1rem / 1.4 'Play';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$primary-color: #fcb040;
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+        color: $primary-color;
+    }
+
+    &.btn:hover,
+    &.btn:focus {
+        color: #202020;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .56rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+
+.btn-primary {
+    color: #202020;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.btn-lg {
+	width: 343px;
+
+    @media screen and (max-width: 1199px){
+        width: 250px;
+    }
+}
+
+.btn-w {
+    width: 100%;
+}
+
+.wrapper {
+    min-width: 320px;
+    overflow: hidden;
+    min-height: 100%;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.container {
+	position: relative;
+    max-width: 1580px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &-small {
+    	@extend .container;
+    	max-width: 1240px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}

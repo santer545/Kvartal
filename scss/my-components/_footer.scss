@@ -1,0 +1,128 @@
+.footer {
+    background-color: #202020;
+    color: #fff;
+
+    &-top {
+        padding: 30px 0;
+        text-align: center;
+        font-family: Georgia;
+        font-style: italic;
+        color: #fff;
+        font-size: 2.375rem;
+        @media screen and (max-width: 1199px){
+        	font-size: 1.375rem;
+        }
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    &-heading {
+        font-size: 1.5625rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-form {
+        flex: 0 0 343px;
+    }
+
+    &-contacts {
+        max-width: 30%;
+    }
+
+    &-bottom {
+        padding: 30px 0;
+    }
+
+    &-menu {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                a {
+                    color: #8c8c8c;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-phone {
+        font-size: 1.5625rem;
+        font-weight: bold;
+        color: $primary-color;
+        display: inline-block;
+        padding-top: 20px;
+    }
+
+    &-email {
+        color: #fff;
+    }
+
+    &-social {
+        list-style-type: none;
+        padding: 30px 0 20px;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+
+            a {
+                display: block;
+                width: 42px;
+                height: 42px;
+            }
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+.telegram {
+    background: url('../images/css_sprites.png') -10px -72px;
+}
+
+.instagram {
+    background: url('../images/css_sprites.png') -72px -10px;
+}
+
+.facebook {
+    background: url('../images/css_sprites.png') -10px -10px;
+}
+
+.map {
+    position: relative;
+    height: 535px;
+
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.copyright {
+    font-size: 0.78rem;
+    color: #535353;
+    padding-top: 10px;
+}
