@@ -6,6 +6,9 @@
     &-wrapper {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 767px) {
+            display: block; 
+        }
     }
 
     &-text {
@@ -19,6 +22,11 @@
             font-size: 1.2rem;
         }
 
+        @media screen and (max-width: 767px) {
+            flex: auto;
+            margin-bottom: 15px;    
+        }
+
         span {
             font-size: 1rem;
             font-weight: normal;
@@ -28,6 +36,15 @@
 
     &-form {
         flex: 0 0 60%;
+        @media screen and (max-width: 767px) {
+            flex: auto;
+        }
+
+        .btn-lg {
+            @media screen and (max-width: 767px) {
+                width: 100%;    
+            }
+        }
     }
 }
 
@@ -122,6 +139,12 @@
     align-items: center;
     padding-top: 7%;
     padding-bottom: 6%;
+
+    @media screen and (max-width: 767px) {
+        display: block;
+        padding-bottom: 0;  
+        padding-top: 0; 
+    }
 }
 
 .tab {
@@ -133,6 +156,11 @@
     padding: 0;
     list-style-type: none;
 
+    @media screen and (max-width: 767px) {
+        display: flex;
+        justify-content: space-between;  
+    }
+
     li {
         display: inline-block;
         vertical-align: middle;
@@ -140,6 +168,10 @@
 
         @media screen and (max-width: 991px) {
             margin: 0 15px; 
+        }
+
+        @media screen and (max-width: 767px) {
+            margin: 0;  
         }
     }
     a {
