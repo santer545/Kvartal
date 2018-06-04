@@ -16,6 +16,8 @@ $(function() {
     inputMasks();
 
     animateAnchor();
+
+    mobileMenuOpen();
 })
 
 $(window).resize(function() {
@@ -81,9 +83,9 @@ function initialSlider() {
                 slidesPerView: 1
             },
             // when window width is <= 640px
-            640: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
+            600: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
             },
             1024: {
                 slidesPerView: 2,
@@ -167,6 +169,8 @@ function animateAnchor() {
         .not('[href="#"]')
         .not('[href="#0"]')
         .click(function(event) {
+            $('.js-mobile-menu').removeClass('active');
+            $('.js-gamburger').removeClass('open');
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
@@ -196,4 +200,12 @@ function animateAnchor() {
                 }
             }
         });
+}
+
+
+function mobileMenuOpen() {
+    $('.js-gamburger').click(function() {
+        $(this).toggleClass('open');
+        $('.js-mobile-menu').toggleClass('active');
+    })
 }

@@ -36,5 +36,10 @@
         vertical-align: middle; 
         margin: 0;  
         line-height: 1.1;   
+
+        @media screen and (max-width: 767px) {
+            display: block;
+            margin-bottom: 20px;
+        }
     }
 }
