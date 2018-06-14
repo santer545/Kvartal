@@ -7,7 +7,7 @@
         display: flex;
         align-items: center;
         @media screen and (max-width: 767px) {
-            display: block; 
+            display: block;
         }
     }
 
@@ -24,7 +24,7 @@
 
         @media screen and (max-width: 767px) {
             flex: auto;
-            margin-bottom: 15px;    
+            margin-bottom: 15px;
         }
 
         span {
@@ -42,7 +42,7 @@
 
         .btn-lg {
             @media screen and (max-width: 767px) {
-                width: 100%;    
+                width: 100%;
             }
         }
     }
@@ -53,12 +53,16 @@
     z-index: 2;
     height: 280px;
 
-    @media screen and (max-width: 1439px){
+    @media screen and (max-width: 1439px) {
         height: 200px;
     }
 
     @media screen and (max-width: 991px) {
         height: 160px;
+    }
+
+    @media screen and (max-width: 640px) {
+        height: 250px;
     }
 
     .swiper-container {
@@ -72,26 +76,91 @@
         background-size: cover;
         position: relative;
         transition: transform 0.3s;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+        
+        video {
+            width: 100%;
         }
-        &:hover {
-            transform: scale(1.3);
-            z-index: 2;
+        &__dark {
             &:after {
-                display: none;
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
             }
-            .bg-zoom {
-                opacity: 1;
+            &:hover {
+                transform: scale(1.3);
+                z-index: 2;
+                &:after {
+                    display: none;
+                }
+                .bg-zoom {
+                    opacity: 1;
+                }
             }
         }
+        &__video {
+            &:after {
+                background-size: cover;
+            }
+            &.active {
+                &:after {
+                    display: none;  
+                }
+            }
+            &:nth-child(1) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                    background-image: url('../images/video-bg-1.png');
+                }
+            }
+
+            &:nth-child(2) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                    background-image: url('../images/video-bg.jpg.png');
+                }
+            }
+
+            &:nth-child(3) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                    background-image: url('../images/video-bg-3.png');
+                }
+            }
+            
+        }
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 8px;
+    }
+    .swiper-pagination-bullet {
+        background-color: #fff;
+        opacity: 0.8;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $primary-color;
     }
     .swiper-button-next,
     .swiper-container-rtl .swiper-button-prev {
@@ -104,6 +173,7 @@
             outline: none;
         }
     }
+
 
     .swiper-button-prev,
     .swiper-container-rtl .swiper-button-next {
@@ -142,8 +212,8 @@
 
     @media screen and (max-width: 767px) {
         display: block;
-        padding-bottom: 0;  
-        padding-top: 0; 
+        padding-bottom: 0;
+        padding-top: 0;
     }
 }
 
@@ -158,7 +228,7 @@
 
     @media screen and (max-width: 767px) {
         display: flex;
-        justify-content: space-between;  
+        justify-content: space-between;
     }
 
     li {
@@ -167,11 +237,11 @@
         margin: 0 30px;
 
         @media screen and (max-width: 991px) {
-            margin: 0 15px; 
+            margin: 0 15px;
         }
 
         @media screen and (max-width: 767px) {
-            margin: 0;  
+            margin: 0;
         }
     }
     a {

@@ -1,22 +1,32 @@
 .header {
     background-color: #202020;
-    padding: 20px 0;
+    
+    
+    // display: flex;
+    // align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 4;
 
-    @media screen and (max-width: 767px) {
-        padding: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 90px;
-        z-index: 4;
+    &.sticky {
+        .header-wrapper {
+            height: 90px;   
+        }
+        
     }
+
+    
 
     &-wrapper {
         display: flex;
         align-items: center;
+        height: 126px;
+        padding: 20px 0;    
+        transition: height 0.3s;
         @media screen and (max-width: 767px) {
-            height: 90px;
+            height: 50px;
             justify-content: center;
         }
     }
@@ -25,10 +35,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex: 0 0 74%;
+        flex: 0 0 64%;
 
         @media screen and (max-width: 1439px) {
-            flex: 0 0 80%;
+            flex: 0 0 70%;
         }
 
         @media screen and (max-width: 767px) {
@@ -38,6 +48,8 @@
             left: 0;
             right: 0;
             height: 100vh;
+            max-height: 100vh;
+            overflow-y: auto;
             background-color: #202020;
             transform: translate(100%, 0);
             transition: transform 0.3s;
@@ -53,9 +65,9 @@
     }
 
     &-logo {
-        flex: 0 0 26%;
+        flex: 0 0 36%;
         @media screen and (max-width: 1439px) {
-            flex: 0 0 20%;
+            flex: 0 0 30%;
         }
         @media screen and (max-width: 767px) {
             display: none;
@@ -104,6 +116,10 @@
             color: $primary-color;
             font-size: 1.5625rem;
             font-weight: bold;
+
+            @media screen and (max-width: 1500px) {
+                font-size: 1.4rem;
+            }
 
             @media screen and (max-width: 1199px) {
                 font-size: 1.25rem;

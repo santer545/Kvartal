@@ -9,8 +9,8 @@
         font-style: italic;
         color: #fff;
         font-size: 2.375rem;
-        @media screen and (max-width: 1199px){
-        	font-size: 1.375rem;
+        @media screen and (max-width: 1199px) {
+            font-size: 1.375rem;
         }
 
         span {
@@ -29,7 +29,7 @@
         justify-content: space-between;
 
         @media screen and (max-width: 767px) {
-            display: block; 
+            display: block;
         }
     }
 
@@ -40,14 +40,14 @@
             flex: 0 0 270px;
         }
         @media screen and (max-width: 767px) {
-            display: none;  
+            display: none;
         }
     }
 
     &-contacts {
         max-width: 30%;
         @media screen and (max-width: 767px) {
-            max-width: 60%; 
+            max-width: 60%;
         }
     }
 
@@ -57,7 +57,7 @@
 
     &-menu {
         @media screen and (max-width: 767px) {
-            display: none;  
+            display: none;
         }
         ul {
             padding: 0;
@@ -107,7 +107,7 @@
             &:not(:last-child) {
                 margin-right: 40px;
                 @media screen and (max-width: 991px) {
-                    margin-right: 10px; 
+                    margin-right: 10px;
                 }
             }
         }
@@ -127,9 +127,27 @@
 }
 
 .map {
-    position: relative;
     height: 535px;
-
+    display: flex;
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+    &-wrapper {
+        width: 50%;
+        position: relative;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-plan {
+        width: 50%;
+        background-size: cover;
+        background-position: center center;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
     iframe {
         position: absolute;
         width: 100%;

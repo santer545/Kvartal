@@ -15,7 +15,9 @@
 
     &-mobile {
         margin-bottom: 30px;
-
+		@media screen and (min-width: 768px) {
+			display: none;
+		}
         img {
             width: 100%;
         }
@@ -35,6 +37,12 @@
         }
         &:focus {
             outline: none;
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        @media screen and (max-width: 767px) {
+            top: 70%;
         }
     }
 
@@ -285,6 +293,10 @@
     &__flex {
         display: flex;
         margin-bottom: 0;
+
+        @media screen and (max-width: 767px) {
+            font-size: 0.9rem;  
+        }
     }
 }
 

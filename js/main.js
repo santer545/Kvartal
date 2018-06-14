@@ -17,8 +17,12 @@ $(function() {
 
     animateAnchor();
 
-    mobileMenuOpen();
+    mobileMenu();
 })
+
+window.onscroll = function() {
+    header()
+};
 
 $(window).resize(function() {
     sameHeight();
@@ -56,48 +60,6 @@ function initialSlider() {
     });
 
 
-    swiperBanner.on('slideChange', function() {
-        $('.js-current').text('0' + swiperBanner.activeIndex);
-    });
-
-    swiperBanner.on('slideChangeTransitionStart', function() {
-        if (swiperBanner.activeIndex == ((swiperBanner.slides.length - 2) + 1)) {
-            $('.js-current').text('01');
-        }
-    });
-
-    $('.js-all').text('0' + (swiperBanner.slides.length - 2));
-
-    var swiperAdv = new Swiper('.js-advantages', {
-        navigation: {
-            nextEl: '.js-adv-next',
-            prevEl: '.js-adv-prev',
-        },
-        breakpoints: {
-            // when window width is <= 320px
-            320: {
-                slidesPerView: 1
-            },
-            // when window width is <= 480px
-            480: {
-                slidesPerView: 1
-            },
-            // when window width is <= 640px
-            600: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            },
-            1024: {
-                slidesPerView: 2,
-                slidesPerGroup: 2
-            }
-        }
-    });
-
-    $('.advantages-number').each(function(item, number) {
-        $(this).text('0' + (item + 1));
-    })
-
 
     var swiperGallery = new Swiper('.js-gallery', {
         slidesPerView: 6,
@@ -105,6 +67,32 @@ function initialSlider() {
             nextEl: '.js-gallery-next',
             prevEl: '.js-gallery-prev',
         },
+        breakpoints: {
+
+            640: {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                }
+            }
+        }
+    });
+
+    var js_gallery_video = new Swiper('.js-gallery-video', {
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.js-gallery-next',
+            prevEl: '.js-gallery-prev',
+        },
+        breakpoints: {
+
+            640: {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                }
+            }
+        }
     });
 }
 
@@ -131,11 +119,38 @@ function tabs() {
     })
 }
 
+function header() {
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    if (window.pageYOffset != 0) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
 function playVideo() {
     var video = document.getElementById('video-cottej');
+    var video_1 = document.getElementById('video-cottej-1');
+    var video_2 = document.getElementById('video-cottej-2');
+    var video_3 = document.getElementById('video-cottej-3');
     $('.js-holder').click(function() {
         video.play();
         $(this).addClass('hidden');
+    })
+    $('#video-1').click(function() {
+        video_1.play();
+        $(this).addClass('active');
+    })
+
+    $('#video-2').click(function() {
+        video_2.play();
+        $(this).addClass('active');
+    })
+    $('#video-3').click(function() {
+        video_3.play();
+        $(this).addClass('active');
     })
 }
 
@@ -157,6 +172,13 @@ function carousel() {
     });
 }
 
+function mobileMenu() {
+    $('.js-gamburger').click(function() {
+        $(this).toggleClass('open');
+        $('.js-mobile-menu').toggleClass('active');
+    })
+}
+
 function inputMasks() {
     $('.js-phone').mask('+38-000-000-00-00');
 }
@@ -164,13 +186,12 @@ function inputMasks() {
 
 function animateAnchor() {
     // Select all links with hashes
-    $('a[href*="#"]')
+    $('a[href^="#"]')
 
         .not('[href="#"]')
         .not('[href="#0"]')
+        .not('[href^="#tab"]')
         .click(function(event) {
-            $('.js-mobile-menu').removeClass('active');
-            $('.js-gamburger').removeClass('open');
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
@@ -199,13 +220,10 @@ function animateAnchor() {
                     });
                 }
             }
+            $('.js-gamburger').removeClass('open');
+            $('.js-mobile-menu').removeClass('active');
         });
-}
 
 
-function mobileMenuOpen() {
-    $('.js-gamburger').click(function() {
-        $(this).toggleClass('open');
-        $('.js-mobile-menu').toggleClass('active');
-    })
+
 }

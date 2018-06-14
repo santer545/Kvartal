@@ -44,6 +44,10 @@
     &-wrapper {
         display: flex;
         flex-wrap: wrap;
+
+        @media screen and (max-width: 767px) {
+            margin: 0 -15px; 
+        }
     }
 
     &-left {
@@ -56,7 +60,7 @@
         @media screen and (max-width: 767px) {
             width: 100%;
             order: 2;
-            padding-left: 0;
+            padding: 0 15px;    
         }
     }
 
@@ -110,7 +114,7 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/video.jpg');
+        background-image: url('../images/video-bg.jpg.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
