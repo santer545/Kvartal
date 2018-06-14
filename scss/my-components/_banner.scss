@@ -4,7 +4,10 @@
     height: 100vh;
 
     @media screen and (max-width: 767px) {
-        padding-top: 90px;
+        padding-top: 50px;
+        background-image: url('../images/mobile-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
     }
     .container {
         @media screen and (max-width: 767px) {
@@ -111,9 +114,7 @@
         @media screen and (max-width: 767px) {
             width: 100%;    
             position: static;
-            background-image: url('../images/mobile-bg.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
+            
             right: auto;
             bottom: auto;
             padding-left: 10%;
@@ -252,9 +253,8 @@
     position: relative;
     display: flex;
 
-    @media screen and (max-width: 600px) {
-        margin-left: -13%;
-        margin-right: -13%;
+    @media screen and (max-width: 767px) {
+        display: none;  
     }
 
     &-item {

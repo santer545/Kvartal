@@ -60,6 +60,12 @@ function initialSlider() {
     });
 
 
+    var swiperAdv = new Swiper('.js-adv-mobile', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
 
     var swiperGallery = new Swiper('.js-gallery', {
         slidesPerView: 6,

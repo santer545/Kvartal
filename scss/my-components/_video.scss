@@ -9,6 +9,11 @@
         padding-top: 30px;
     }
 
+    @media screen and (max-width: 767px) {
+        padding-top: 0; 
+        background-image: none;
+    }
+
 
     &-link {
         font-size: 1.25rem;
@@ -40,6 +45,10 @@
         bottom: 0;
         background-color: rgba(248, 248, 248, 0.94);
         z-index: 1;
+
+        @media screen and (max-width: 767px) {
+            display: none;  
+        }
     }
     &-wrapper {
         display: flex;
@@ -119,6 +128,16 @@
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
+    }
+}
+
+.mobile-adv {
+    display: none;  
+    position: relative;
+    z-index: 3; 
+    @media screen and (max-width: 767px) {
+        display: block; 
+        height: 150px;  
     }
 }
 
